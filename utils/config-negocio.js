@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Alietty Nails
+// CLIENTE: ACRYKÁ NAILS
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '18be5204-1780-4ce4-b8cc-e1e536805386'; // ID de Alietty Nails
+const NEGOCIO_ID_POR_DEFECTO = '47666c9b-afa1-4286-a727-0e30f86611af'; // ID de ACRYKÁ NAILS
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Alietty Nails';
+    return config?.nombre || 'ACRYKÁ NAILS';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '5358296804';
+    return config?.telefono || '51092439';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'yaneta9207@gmail.com';
+    return config?.email || 'nailsacryka@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Alietty Nails!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a ACRYKÁ NAILS!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'alietty-nails';
+    return config?.ntfy_topic || 'acryka-nails';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Alietty Nails');
+console.log('✅ config-negocio.js listo para ACRYKÁ NAILS');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

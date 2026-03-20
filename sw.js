@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Alietty Nails
+// sw.js - Service Worker para ACRYKÁ NAILS
 
-const CACHE_NAME = 'alietty-nails-v1';
+const CACHE_NAME = 'acryka-nails-v1';
 const urlsToCache = [
-  '/aliettynails/',
-  '/aliettynails/index.html',
-  '/aliettynails/admin.html',
-  '/aliettynails/admin-login.html',
-  '/aliettynails/setup-wizard.html',
-  '/aliettynails/editar-negocio.html',
-  '/aliettynails/manifest.json',
-  '/aliettynails/icons/icon-72x72.png',
-  '/aliettynails/icons/icon-96x96.png',
-  '/aliettynails/icons/icon-128x128.png',
-  '/aliettynails/icons/icon-144x144.png',
-  '/aliettynails/icons/icon-152x152.png',
-  '/aliettynails/icons/icon-192x192.png',
-  '/aliettynails/icons/icon-384x384.png',
-  '/aliettynails/icons/icon-512x512.png'
+  '/acrika-nails/',
+  '/acrika-nails/index.html',
+  '/acrika-nails/admin.html',
+  '/acrika-nails/admin-login.html',
+  '/acrika-nails/setup-wizard.html',
+  '/acrika-nails/editar-negocio.html',
+  '/acrika-nails/manifest.json',
+  '/acrika-nails/icons/icon-72x72.png',
+  '/acrika-nails/icons/icon-96x96.png',
+  '/acrika-nails/icons/icon-128x128.png',
+  '/acrika-nails/icons/icon-144x144.png',
+  '/acrika-nails/icons/icon-152x152.png',
+  '/acrika-nails/icons/icon-192x192.png',
+  '/acrika-nails/icons/icon-384x384.png',
+  '/acrika-nails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/aliettynails/icons/icon-192x192.png');
+            return caches.match('/acrika-nails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Alietty Nails');
+console.log('✅ Service Worker configurado para ACRYKÁ NAILS');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
